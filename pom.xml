@@ -11,6 +11,12 @@
     <modules>
         <module>nacos-discovery-server</module>
         <module>pilipihu-common</module>
+        <module>pilipihu-gateway</module>
+        <module>manager-center</module>
+        <module>user-service</module>
+        <module>video-service</module>
+        <module>article-service</module>
+        <module>pilipihu-consumer</module>
     </modules>
 
     <properties>

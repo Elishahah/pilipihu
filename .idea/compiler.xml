@@ -7,7 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="nacos-discovery-server" />
+        <module name="pilipihu-consumer" />
+        <module name="video-service" />
+        <module name="article-service" />
         <module name="pilipihu-common" />
+        <module name="manager-center" />
+        <module name="user-service" />
+        <module name="pilipihu-gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,10 +22,16 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="article-service" options="-parameters" />
+      <module name="manager-center" options="-parameters" />
       <module name="nacos-discovery-server" options="-parameters" />
       <module name="pilipihu" options="-parameters" />
       <module name="pilipihu-common" options="-parameters" />
+      <module name="pilipihu-consumer" options="-parameters" />
+      <module name="pilipihu-gateway" options="-parameters" />
       <module name="registry7001" options="-parameters" />
+      <module name="user-service" options="-parameters" />
+      <module name="video-service" options="-parameters" />
     </option>
   </component>
 </project>
