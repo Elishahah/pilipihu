@@ -14,6 +14,7 @@
         <module name="manager-center" />
         <module name="user-service" />
         <module name="pilipihu-gateway" />
+        <module name="testcrud" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -30,6 +31,7 @@
       <module name="pilipihu-consumer" options="-parameters" />
       <module name="pilipihu-gateway" options="-parameters" />
       <module name="registry7001" options="-parameters" />
+      <module name="testcrud" options="-parameters" />
       <module name="user-service" options="-parameters" />
       <module name="video-service" options="-parameters" />
     </option>

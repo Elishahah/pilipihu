@@ -5,9 +5,9 @@ server:
 spring:
   # 数据源相关信息
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    driver: com.mysq.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/pilipihu_user_service?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    #type: com.alibaba.druid.pool.DruidDataSource
+    driver: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_pilipihu_user?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
     username: root
     password: 11312
 
@@ -16,6 +16,6 @@ mybatis:
   # 全局配置文件
   # config-location: classpath:mybatis-config.xml
   # 映射文件
-  mapper-locations: classpath:com/lyra/app/mapper/*Mapper.xml
+  mapper-locations: classpath:mapper/*Mapper.xml
   configuration:
     map-underscore-to-camel-case: true
