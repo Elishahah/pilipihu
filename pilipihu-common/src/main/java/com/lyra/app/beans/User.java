@@ -3,7 +3,7 @@ package com.lyra.app.beans;
 import java.io.Serializable;
 
 public class User implements Serializable {
-    private Long userId;
+    private Long id;
     private String userName;
     private String userPassword;
     private String email;
@@ -12,20 +12,20 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(Long userId, String userName, String userPassword, String email, String phone) {
-        this.userId = userId;
+    public User(Long id, String userName, String userPassword, String email, String phone) {
+        this.id = id;
         this.userName = userName;
         this.userPassword = userPassword;
         this.email = email;
         this.phone = phone;
     }
 
-    public Long getUserId() {
-        return userId;
+    public Long getId() {
+        return id;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getUserName() {
@@ -63,7 +63,7 @@ public class User implements Serializable {
     @Override
     public String toString() {
         return "User{" +
-                "userId=" + userId +
+                "id=" + id +
                 ", userName='" + userName + '\'' +
                 ", userPassword='" + userPassword + '\'' +
                 ", email='" + email + '\'' +

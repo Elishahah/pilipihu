@@ -5,13 +5,13 @@
 
 <mapper namespace="com.lyra.app.mapper.UserMapper">
     <resultMap id="user" type="com.lyra.app.beans.User">
-        <id column="user_id" property="userId" />
+        <id column="id" property="id" />
         <result column="user_name" property="userName"/>
-        <result column="user_pwd" property="userPassword"/>
+        <result column="user_password" property="userPassword"/>
         <result column="phone" property="phone"/>
         <result column="email" property="email"/>
     </resultMap>
     <select id="selectAll" resultMap="user">
-        select * from user
+        select * from tbl_user
     </select>
 </mapper>
