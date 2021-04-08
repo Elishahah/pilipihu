@@ -1,17 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?getUserByIdxml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.lyra.app.mapper.UserMapper">
-    <resultMap id="user" type="com.lyra.app.beans.User">
-        <id column="id" property="id" />
-        <result column="user_name" property="userName"/>
-        <result column="user_password" property="userPassword"/>
-        <result column="phone" property="phone"/>
-        <result column="email" property="email"/>
-    </resultMap>
-    <select id="selectAll" resultMap="user">
-        select * from tbl_user
+    <select id="selectAll" resultType="user">
+        select id, user_name, user_password, phone, email from tbl_user
     </select>
+
+    <select id="getUserById" parameterType="int" resultType="user">
+        slect id, user_name, user_password, phone, email from tbl_user where id = #{id}
+    </select>
+    
+    <select id="getUserByName" parameterType="String" resultType="user">
+        slect id, user_name, user_password, phone, email from tbl_user where id = #{name}
+    </select>
+
+    <insert id="newUser" parameterType="user">
+        insert into tbl_user value(#{user.id}, #{user.user_name}, #{user.user_password}, #{user.phone}, #{user.email})
+    </insert>
 </mapper>
