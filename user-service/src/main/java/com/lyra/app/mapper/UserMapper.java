@@ -2,6 +2,7 @@ package com.lyra.app.mapper;
 
 import com.lyra.app.beans.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -11,5 +12,6 @@ public interface UserMapper {
     User getUserById(int id);
     User getUserByName(String name);
 
-    void newUser(User use);
+    void newUser(@Param("user") User user);
+    void deleteUserById(int id);
 }

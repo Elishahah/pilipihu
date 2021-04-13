@@ -38,7 +38,12 @@ public class UserController {
     }
 
     @PutMapping("/")
-    public void createUser(){
+    public void createUser(User user){
+        userService.newUser(user);
+    }
 
+    @DeleteMapping("/{id}")
+    public void deleteUser(@PathVariable("id") int id){
+        userService.deleteUser(id);
     }
 }

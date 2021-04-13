@@ -16,7 +16,11 @@
         slect id, user_name, user_password, phone, email from tbl_user where id = #{name}
     </select>
 
-    <insert id="newUser" parameterType="user">
-        insert into tbl_user value(#{user.id}, #{user.user_name}, #{user.user_password}, #{user.phone}, #{user.email})
+    <insert id="newUser" parameterType="user" useGeneratedKeys="true" keyProperty="id">
+        insert into tbl_user(user_name, user_password, phone, email) value(#{user.userName}, #{user.userPassword}, #{user.phone}, #{user.email})
     </insert>
+
+    <delete id="deleteUserById" parameterType="int">
+        delete from tbl_user where id = #{id}
+    </delete>
 </mapper>
