@@ -9,13 +9,13 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>nacos-discovery-server</module>
+        <module>pilipihu-discovery-server</module>
         <module>pilipihu-common</module>
         <module>pilipihu-gateway</module>
-        <module>manager-center</module>
-        <module>user-service</module>
-        <module>video-service</module>
-        <module>article-service</module>
+        <module>pilipihu-manager-center</module>
+        <module>pilipihu-user-service</module>
+        <module>pilipihu-video-service</module>
+        <module>pilipihu-article-service</module>
         <module>pilipihu-consumer</module>
     </modules>
 
@@ -35,8 +35,10 @@
         <version>2.4.4</version>
     </parent>
 
+    <!-- 管理依赖的版本 -->
     <dependencyManagement>
         <dependencies>
+            <!-- spring cloud相关依赖 -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -44,6 +46,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!-- spring cloud Alibaba相关依赖-->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>

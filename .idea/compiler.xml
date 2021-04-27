@@ -6,34 +6,36 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="nacos-discovery-server" />
+        <module name="pilipihu-video-service" />
         <module name="pilipihu-consumer" />
-        <module name="video-service" />
-        <module name="article-service" />
+        <module name="pilipihu-manager-center" />
         <module name="pilipihu-common" />
-        <module name="manager-center" />
-        <module name="user-service" />
+        <module name="pilipihu-discovery-server" />
         <module name="pilipihu-gateway" />
         <module name="testcrud" />
+        <module name="pilipihu-article-service" />
+        <module name="pilipihu-user-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="pilipihu-single" target="1.8" />
       <module name="registry7001" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="article-service" options="-parameters" />
-      <module name="manager-center" options="-parameters" />
-      <module name="nacos-discovery-server" options="-parameters" />
       <module name="pilipihu" options="-parameters" />
+      <module name="pilipihu-article-service" options="-parameters" />
       <module name="pilipihu-common" options="-parameters" />
       <module name="pilipihu-consumer" options="-parameters" />
+      <module name="pilipihu-discovery-server" options="-parameters" />
       <module name="pilipihu-gateway" options="-parameters" />
+      <module name="pilipihu-manager-center" options="-parameters" />
+      <module name="pilipihu-single" options="-parameters" />
+      <module name="pilipihu-user-service" options="-parameters" />
+      <module name="pilipihu-video-service" options="-parameters" />
       <module name="registry7001" options="-parameters" />
       <module name="testcrud" options="-parameters" />
-      <module name="user-service" options="-parameters" />
-      <module name="video-service" options="-parameters" />
     </option>
   </component>
 </project>

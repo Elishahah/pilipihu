@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
-    <file url="file://$PROJECT_DIR$/article-service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/manager-center/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/nacos-discovery-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pilipihu-article-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pilipihu-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pilipihu-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pilipihu-discovery-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pilipihu-gateway/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/user-service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/video-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pilipihu-manager-center/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pilipihu-user-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pilipihu-video-service/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
