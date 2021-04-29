@@ -38,21 +38,34 @@ public class UserController {
     @PostMapping("/user")
     public String login(User user, HttpServletRequest request, HttpServletResponse response){
         Cookie[] cookies = request.getCookies();
+        String defaultBehav = "redirect:login";
 
         if(cookies == null){
-            return "redirect:login";
+            return defaultBehav;
         }
 
         HttpSession session = request.getSession(false);
-
-        User userInfo = userService.getUserByName(user.getUserName());
-        if (user.getUserName().equals(userInfo.getUserName())){
-            response.addCookie("","sad");
-            return "success";
-        }else{
-            return "failed";
+        String sessionId = session.getId();
+        for(Cookie cookie: cookies){
+            if(cookie.getName().equals("JSESSIONID") && cookie.getValue().equals(sessionId)){
+                for(Cookie c1: cookies){
+                    if(c1.getName().equals("userName")){
+                        String name = c1.getValue();
+                        try {
+                            String realPass = userService.getUserByName(name).getUserPassword();
+                            if(session.getAttribute("password").equals(realPass)){
+                                return "welcome";
+                            }
+                        }catch(NullPointerException e){
+                            return defaultBehav;
+                        }
+                    }
+                }
+            }else{
+                return defaultBehav;
+            }
         }
-
+        return defaultBehav;
     }
 
     @PutMapping("/user")
