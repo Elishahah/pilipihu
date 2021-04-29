@@ -7,7 +7,10 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -30,6 +33,26 @@ public class UserController {
     @GetMapping("/user/{name}")
     public User getUser(@PathVariable("name") String name){
         return userService.getUserByName(name);
+    }
+
+    @PostMapping("/user")
+    public String login(User user, HttpServletRequest request, HttpServletResponse response){
+        Cookie[] cookies = request.getCookies();
+
+        if(cookies == null){
+            return "redirect:login";
+        }
+
+        HttpSession session = request.getSession(false);
+
+        User userInfo = userService.getUserByName(user.getUserName());
+        if (user.getUserName().equals(userInfo.getUserName())){
+            response.addCookie("","sad");
+            return "success";
+        }else{
+            return "failed";
+        }
+
     }
 
     @PutMapping("/user")
